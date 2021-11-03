@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-6"><h1>STUDENT</h1></div>
+</div>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">DateOfBirth</th>
+            <th scope="col">PhoneNum</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">GPA</th>
+            <th scope="col" class="text-end">Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+        <tr>
+            <th scope="row">{{this.ID}}</th>
+            <td>{{this.Name}}</td>
+            <td>{{this.DateOfBirth}}</td>
+            <td>{{this.PhoneNum}}</td>
+            <td>{{this.Address}}</td>
+            <td>{{this.Email}}</td>
+            <td>{{this.GPA}}</td>
+            <td class="text-end">
+                <a href="/student/update/{{this.ID}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"> Update</i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
