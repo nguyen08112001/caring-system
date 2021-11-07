@@ -13,7 +13,7 @@ exports.view = (req, res) => {
         if (err) throw err;
         console.log("Connect Successfully");
 
-        connection.query("SELECT * FROM STUDENT", (err, rows) => {
+        connection.query("SELECT * FROM student", (err, rows) => {
             connection.release();
 
             if (err) throw err;

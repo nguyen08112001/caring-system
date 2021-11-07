@@ -18,11 +18,9 @@ app.engine('hbs', exphbs({ extname: '.hbs' }))
 app.set('view engine', 'hbs')
 
 const homeRouter = require('./routes/HomeRouter')
-//app.use('/', homeRouter)
+app.use('/', homeRouter)
 
-app.use('/', (req, res) => {
-    res.send('123')
-})
+
 
 const studentRouter = require('./routes/StudentRouter.js')
 app.use('/student', studentRouter)
